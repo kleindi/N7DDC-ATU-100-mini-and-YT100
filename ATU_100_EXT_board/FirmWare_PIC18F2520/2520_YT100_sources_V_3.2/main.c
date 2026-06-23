@@ -19,7 +19,7 @@
   char Restart = 0, Test = 0, lcd_prep_short = 0;
   char L = 1, but= 0;
   int Cap1, Cap2, Cap3, Cap4, Cap5, Cap6, Cap7;
-  int Ind1, Ind2, Ind3, Ind4, Ind5, Ind6, Ind7;
+  int Ind1, Ind2, Ind3, Ind4, Ind5, Ind6, Ind7, Ind8;
   char Dysp_delay = 0;
   int dysp_cnt = 0;
   float dysp_cnt_mult = 2.3;
@@ -54,9 +54,10 @@ void main() {
       Test = 1;
       Auto =0;
    }
-   if(L_q==5)L_mult = 1;
+   if(L_q==5) L_mult = 1;
    else if(L_q==6) L_mult = 2;
    else if(L_q==7) L_mult = 4;
+   else if(L_q==8) L_mult = 8;
    if(C_q==5) C_mult =1;
    else if(C_q==6) C_mult = 2;
    else if(C_q==7) C_mult = 4;
@@ -752,6 +753,7 @@ void lcd_ind() {
      if(ind.B4) work_int += Ind5;
      if(ind.B5) work_int += Ind6;
      if(ind.B6) work_int += Ind7;
+     if(ind.B7) work_int += Ind8;
      if(work_int>9999) {    // more then 9999 nH
         work_int += 50; // round
         IntToStr(work_int, work_str);
@@ -890,6 +892,7 @@ void cells_init(void) {
    Ind5 =  Bcd2Dec(EEPROM_Read(24)) * 100 + Bcd2Dec(EEPROM_Read(25));  // Ind5
    Ind6 =  Bcd2Dec(EEPROM_Read(26)) * 100 + Bcd2Dec(EEPROM_Read(27));  // Ind6
    Ind7 =  Bcd2Dec(EEPROM_Read(28)) * 100 + Bcd2Dec(EEPROM_Read(29));  // Ind7
+   Ind8 =  Bcd2Dec(EEPROM_Read(30)) * 100 + Bcd2Dec(EEPROM_Read(35));  // Ind8
    //
    Cap1 =  Bcd2Dec(EEPROM_Read(32)) * 100 + Bcd2Dec(EEPROM_Read(33));  // Cap1
    Cap2 =  Bcd2Dec(EEPROM_Read(34)) * 100 + Bcd2Dec(EEPROM_Read(35));  // Cap2

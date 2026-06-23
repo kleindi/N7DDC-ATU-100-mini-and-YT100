@@ -26,12 +26,12 @@ Count=0
 Count=0
 ActiveImageIndex=-1
 [OPENED_FILES]
-File0=main.h
-File1=oled_control.c
-File2=oled_control.h
-File3=main.c
-File4=pic_init.c
-File5=pic_init.h
+File0=oled_control.c
+File1=oled_control.h
+File2=main.c
+File3=pic_init.c
+File4=pic_init.h
+File5=main.h
 Count=6
 [EEPROM]
 File0=atu_100_fw_00.ihex
@@ -61,11 +61,16 @@ Count=4
 VECTOR_MODE=0
 IVT_BASE=00000008
 [EXPANDED_NODES]
-Count=0
+0=atu_100_fw_00.mcppi
+5=Header Files
+Count=2
 [LIB_EXPANDED_NODES]
 0=mikroE Libraries
 1=System Libraries
-Count=2
+57=C_Math
+126=EEPROM
+162=FLASH
+Count=6
 [PROGRAMMER_TYPE]
 Value=mikroE mikroProg
 [CODEGRIP_OPTIONS]
