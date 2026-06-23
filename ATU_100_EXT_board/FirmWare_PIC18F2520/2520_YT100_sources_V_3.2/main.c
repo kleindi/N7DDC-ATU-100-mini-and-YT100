@@ -892,7 +892,7 @@ void cells_init(void) {
    Ind5 =  Bcd2Dec(EEPROM_Read(24)) * 100 + Bcd2Dec(EEPROM_Read(25));  // Ind5
    Ind6 =  Bcd2Dec(EEPROM_Read(26)) * 100 + Bcd2Dec(EEPROM_Read(27));  // Ind6
    Ind7 =  Bcd2Dec(EEPROM_Read(28)) * 100 + Bcd2Dec(EEPROM_Read(29));  // Ind7
-   Ind8 =  Bcd2Dec(EEPROM_Read(30)) * 100 + Bcd2Dec(EEPROM_Read(35));  // Ind8
+   Ind8 =  Bcd2Dec(EEPROM_Read(30)) * 100 + Bcd2Dec(EEPROM_Read(31));  // Ind8
    //
    Cap1 =  Bcd2Dec(EEPROM_Read(32)) * 100 + Bcd2Dec(EEPROM_Read(33));  // Cap1
    Cap2 =  Bcd2Dec(EEPROM_Read(34)) * 100 + Bcd2Dec(EEPROM_Read(35));  // Cap2
